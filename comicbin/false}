@@ -1,0 +1,2 @@
+      invoke  active_record
+      create    db/migrate/20140210041725_add_details_to_comics.rb

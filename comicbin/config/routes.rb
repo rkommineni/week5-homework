@@ -1,4 +1,13 @@
 Comicbin::Application.routes.draw do
+
+  root "comics#index"
+
+  get "/comics" => "comics#index"
+  get "/comics/index" => "comics#index"
+  get "/comics/show/:comic_id" => "comics#show"
+  get "/comics/delete/:comic_id" => "comics#destroy"
+  get "/comics/new" => "comics#new"
+  get "/comics/create" => "comics#create"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

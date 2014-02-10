@@ -2,12 +2,20 @@
   <div class='col-md-5'>
     <!-- INSERT COMIC COVER IMAGE HERE WITH ERB.
          ATTACH THE CLASS of 'img-responsive' TO THIS LINK -->
+             <a href = "/comics/show/<%= @comic.id %>">
+              <% if @comic.image != nil && @comic.image != "" %>
+              <%= image_tag @comic.image, :class => "img-responsive" %>
+              <% else %>
+              <p class = "img-responsive unavailable"><%= @comic.title %></p>
+              <% end %>
+            </a>
   </div>
   <div class='col-md-7'>
-    <h1><!-- INSERT COMIC BOOK TITLE HERE WITH ERB --></h1>
-    <h4><!-- INSERT COMIC BOOK DESCRIPTION HERE WITH ERB --></h4>
+    <h1><%= @comic.title %></h1>
+    <h4><%= @comic.description %></h4>
     <!-- INSERT LINK TO DELETE A COMIC BOOK HERE.
          ATTACH A CLASS of 'btn btn-warning' TO THIS LINK.
          ALSO INCLUDE A CONFIRMATION MESSAGE 'Are you sure?' -->
+         <%= link_to 'Delete Comic', "/comics/delete/#{@comic.id}", data: { confirm: "Are you sure?"}, class: 'btn btn-warning' %>
   </div>
 </div>

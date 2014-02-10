@@ -8,7 +8,7 @@
               <% if comic.image != nil && comic.image != "" %>
               <%= image_tag comic.image, :class => "image-responsive" %>
               <% else %>
-              <p class = "image-unavailable"><%= comic.title %></p>
+              <p class = "image-responsive unavailable"><%= comic.title %></p>
               <% end %>
             </a>
       </div>

@@ -36,6 +36,14 @@ h1.logo {
   height: 400px;
 }
 
+.image-unavailable {
+  margin-bottom: 30px;
+  border-style: solid;
+  border-color: #FFFFFF;
+  width: 250px;
+  height: 400px;
+}
+
 .img-responsive {
   margin-bottom: 30px;
   width: 500px;

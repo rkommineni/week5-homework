@@ -4,6 +4,13 @@
       <div class='col-lg-3 test'>
         <!-- SHOW THE IMAGE OF THE COMIC BOOK AND MAKE THE ENTIRE IMAGE A LINK.
              ATTACH THE CLASS OF 'image-responsive' TO THIS LINK -->
+             <a href = "/comics/show/<%= comic.id %>">
+              <% if comic.image != nil && comic.image != "" %>
+              <%= image_tag comic.image, :class => "image-responsive" %>
+              <% else %>
+              <p class = "image-unavailable"><%= comic.title %></p>
+              <% end %>
+            </a>
       </div>
     <% end %>
   </div>

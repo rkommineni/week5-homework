@@ -12,8 +12,8 @@
   <body>
     <div class='container'>
       <div class='page-header'>
-        <%= link_to 'Add a comic book', new_comic_path, class: 'btn btn-success pull-right add' %>
-        <%= link_to 'View all comics', comics_path, class: 'btn btn-primary pull-right add' %>
+        <%= link_to 'Add a comic book', "/comics/new", class: 'btn btn-success pull-right add' %>
+        <%= link_to 'View all comics', "/comics", class: 'btn btn-primary pull-right add' %>
         <h1 class='logo'>Comic Bin</h1>
       </div>
       <%= yield %>

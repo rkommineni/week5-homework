@@ -3,7 +3,7 @@
 
   <!-- WRITE THE CORRECT FORM HEADER AND BLOCK USING ERB -->
     <% if @comic.errors.any? %>
-      <div id="error_explanation">
+      <div id = "error_explanation">
         <h2><%= pluralize(@comic.errors.count, "error") %> prohibited this comic from being saved:</h2>
 
         <ul>
@@ -14,22 +14,30 @@
       </div>
     <% end %>
 
+    <form action = "/comics/create">
     <div class="form-group">
       <!-- DISPLAY A TITLE LABEL -->
       <!-- DISPLAY A TEXT FIELD AND ATTACH THE CLASS OF 'form-control' TO THIS FIELD -->
+      <label>Title</label>
+      <input type = "text" name = "title" class = "form-control">
     </div>
     <div class="form-group">
       <!-- DISPLAY A DESCRIPTION LABEL -->
       <!-- DISPLAY A TEXT FIELD AND ATTACH THE CLASS OF 'form-control' TO THIS FIELD -->
+      <label>Description</label>
+      <input type = "text" name = "description" class = "form-control">
     </div>
     <div class="form-group">
       <!-- DISPLAY AN IMAGE LABEL -->
       <!-- DISPLAY A TEXT FIELD ATTACH THE CLASS OF 'form-control' TO THIS FIELD -->
+      <label>Image</label>
+      <input type = "text" name = "image" class = "form-control">
     </div>
     <div class="actions">
       <!-- DISPLAY A SUBMIT BUTTON WITH A CLASS OF 'btn btn-primary' -->
+      <button type = "submit" class = "btn btn-primary">Create Comic</button>
     </div>
+    </form>
 
-  <% end %>
   </div>
 </div>
